@@ -11,6 +11,7 @@ int position(vector<vector<int>>& arr) {
     }
     return -1;
 }
+
 int count_inv(vector<vector<int>>& arr) {
     int n = arr.size();
     int m = arr[0].size();

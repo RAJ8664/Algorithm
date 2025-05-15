@@ -1,8 +1,8 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 class DSU {
-public:
+   public:
     vector<int> parent;
     DSU(int n) {
         parent.resize(n + 1);
@@ -20,21 +20,25 @@ public:
 };
 
 int main() {
-	int n, m;
+    int n, m;
     cin >> n >> m;
     vector<vector<int>> adj;
     for (int i = 0; i < m; i++) {
         int u, v, wt;
         cin >> u >> v >> wt;
-        vector<int> temp;
-        temp.push_back(wt); temp.push_back(u); temp.push_back(v);
+        vector<int> temp(n);
+        temp.push_back(wt);
+        temp.push_back(u);
+        temp.push_back(v);
         adj.push_back(temp);
     }
     int sum = 0;
+    vector<int> v(n);
     sort(adj.begin(), adj.end());
     DSU ds(n + 1);
     vector<int> arr(n, 0);
-    for (vector<int> current: adj) {
+    vector<int> res;
+    for (vector<int> current : adj) {
         int wt = current[0], u = current[1], v = current[2];
         if (ds.find(u) != ds.find(v)) {
             sum += wt;

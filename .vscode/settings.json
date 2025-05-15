@@ -1,7 +1,12 @@
 {
     "files.associations": {
         "iostream": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "*.cpp": "cpp",
+        "*.h": "cpp",
+        "*.hpp": "cpp",
+        "*.c": "c",
+        "*.h": "c""*.hpp": "cpp"
     },
     "sqltools.connections": [
         {
@@ -18,5 +23,18 @@
             "username": "root",
             "password": ""
         }
-    ]
+    ],
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
+    "C_Cpp.default.compilerPath": "/usr/bin/g++",
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/**",
+        "/usr/include/c++/**",
+        "/usr/include/x86_64-linux-gnu/c++/**",
+        "/usr/include/c++/9/**",
+        "/usr/include/x86_64-linux-gnu/**",
+        "/usr/include/**"
+    ],
+    "editor.formatOnSave": true,
+    "C_Cpp.clang_format_style": "{ BasedOnStyle: Google, IndentWidth: 4 }"
 }
